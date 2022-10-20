@@ -31,7 +31,26 @@
 # между максимальным и минимальным значением дробной части элементов.
 # [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-lst = [1.1, 1.2, 3.1, 5, 10.01]
-print(lst)
-new_lst = [round(i % 1,2) for i in lst if i % 1 != 0]
-print(f"разница макс и мин: {max(new_lst) - min(new_lst)}")
+# lst = [1.1, 1.2, 3.1, 5, 10.01]
+#print(lst)
+#new_lst = [round(i % 1,2) for i in lst if i % 1 != 0]
+#print(f"разница макс и мин: {max(new_lst) - min(new_lst)}")
+
+a = input('Введите значение a: ')
+b = input('Введите значение b: ')
+c = input('Введите значение c: ')
+a = float(a)
+b = float(b)
+c = float(c)
+d = b**2 - 4 * a * c
+print(str(d))
+if d < 0:
+    print('Корней нет')
+elif d == 0:
+    x = -b / (2 * a)
+    print('x = ' + str(x))
+else:
+    x1 = (-b + d ** 0.5) / (2 * a)
+    x2 = (-b - d ** 0.5) / (2 * a)
+    print('x₁ = ' + str(x1))
+    print('x₂ = ' + str(x2))
